@@ -1,8 +1,11 @@
-const express = require('express');
+const express = require('express'),
+mongoose = require('mongoose'),
+bodyParser = require('body-parser');
+
+require('dotenv').config();
 
 const app = express();
 
-const port = 3000;
 app.listen(port, ()=>{
     console.log(`Server is listening on port ${port}`);
 });
