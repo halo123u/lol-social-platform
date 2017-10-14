@@ -1,0 +1,20 @@
+Setup server 
+    1.setup Accounts
+        a. league of legends ScreenName
+        b.Account id
+        c. name 
+        d.password
+        e.email
+        f.potential stats
+        g.friends
+        h.profile page
+2.setup Auth 
+    a.setup model 
+    b.setup controller
+    c.json web token
+3.Setup Client
+    a.login/signup page
+    b.profile page
+    c.friends list component
+    d.chat
+    e.heatmaps
