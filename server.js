@@ -1,8 +1,10 @@
 const express = require('express'),
 mongoose = require('mongoose'),
-bodyParser = require('body-parser');
-
+bodyParser = require('body-parser'),
+User = require('./api/models/User');
 require('dotenv').config();
+
+mongoose.createConnection('mongodb://localhost/lolAppDb');
 
 const app = express(),
 port = process.env.PORT || 3000;
