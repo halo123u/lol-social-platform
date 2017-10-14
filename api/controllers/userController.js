@@ -7,8 +7,12 @@ const userController ={
         let body = _.pick(req.body, ['username', 'password']);
         
         const new_User = new User(body);
-        new_User.save();
-        console.log(body);
+        new_User.save()
+        .then(()=>{
+            res.send({user : new_User});
+        }).catch(err=>{
+            console.log(err);
+        });
     }   
 }
 

@@ -4,7 +4,7 @@ bodyParser = require('body-parser'),
 User = require('./api/models/User');
 require('dotenv').config();
 
-mongoose.createConnection('mongodb://localhost/lolAppDb');
+mongoose.connect('mongodb://localhost/lolAppDb');
 
 const app = express(),
 port = process.env.PORT || 3000;
