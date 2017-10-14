@@ -1,9 +1,6 @@
-const express = require('express'),
-userRoutes = express.Router();
+const userRoutes = require('express').Router(),
+userController = require('../controllers/userController');
 
-userRoutes.post('/', (req,res) =>{
-    console.log(req.body.username);
-    console.log(req.body.password);
-});
+userRoutes.post('/', userController.newUser);
 
 module.exports = userRoutes; 
