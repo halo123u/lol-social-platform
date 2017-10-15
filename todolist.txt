@@ -4,15 +4,27 @@ Setup server
         b.Account id (DONE)
         c. name 
         d.password (PARTIALLY DONE)
-        e.email/username (DONE)
+        e.email/username(DONE)
         f.potential stats
         g.friends
         h.profile page
-2.setup Auth 
-    a.setup model (BASIC MODEL IS DONE)
-    b.setup controller (BASIC CONTROLLER IS DONE)
-    c.json web token
-3.Setup Client
+2.Set up all user Routes
+    a. Post user/ (DONE)
+    b. Post user/login
+    c. Get user/
+    d. Delete user/me
+3.Set up User Controller
+    a.newUser (PARTIALLY DONE)
+    b.getUserInfo
+    c.signIn
+    d.signOut
+4.Set up User Model
+    a.pre save (DONE)
+    b.Generate Auth token
+    c.remove Auth token
+    d.findbyCredentials
+    e.findByToken
+5.Setup Client
     a.login/signup page
     b.profile page
     c.friends list component
