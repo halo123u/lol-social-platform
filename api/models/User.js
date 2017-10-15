@@ -35,10 +35,10 @@ UserSchema.pre('save',function(next){
 });
 
 UserSchema.statics = {
-    findByCredentials : function(email, password) {
+    findByCredentials : function(username, password) {
         const User = this;
 
-        return User.findOne({email}).then((user)=>{
+        return User.findOne({username}).then((user)=>{
             if(!user){
                 return Promise.reject();
             }

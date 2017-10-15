@@ -15,7 +15,12 @@ const userController ={
         });
     },
     signIn : (req, res) => {
-        console.log(req.body);
+        let body = _.pick(req.body, ['username', 'password']);
+        
+        User.findByCredentials(body.username, body.password).then(user => {
+            res.send({user});
+        })
+
     }   
 }
 
