@@ -1,16 +1,16 @@
 Setup server 
     1.setup Accounts
         a. league of legends ScreenName
-        b.Account id
+        b.Account id (DONE)
         c. name 
-        d.password
-        e.email
+        d.password (PARTIALLY DONE)
+        e.email/username (DONE)
         f.potential stats
         g.friends
         h.profile page
 2.setup Auth 
-    a.setup model 
-    b.setup controller
+    a.setup model (BASIC MODEL IS DONE)
+    b.setup controller (BASIC CONTROLLER IS DONE)
     c.json web token
 3.Setup Client
     a.login/signup page
