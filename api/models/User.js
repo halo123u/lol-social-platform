@@ -16,7 +16,17 @@ const UserSchema = new Schema({
         type : String,
         require : true,
         minlength : 6
-    }
+    },
+    tokens: [{
+        access: {
+            type: String,
+            required : true
+        },
+        token: {
+            type: String,
+            required : true
+        }
+    }]
 });
 
 UserSchema.pre('save',function(next){
