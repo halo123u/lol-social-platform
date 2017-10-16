@@ -7,11 +7,14 @@ const userController ={
         let body = _.pick(req.body, ['username', 'password']);
         
         const new_User = new User(body);
-        new_User.save()
-        .then(()=>{
-            res.send({user : new_User});
+        new_User.save().then(()=>{
+            return new_User.generateAuthToken();
+        }).then( token => {
+            res.header('x-auth',token ).send({user:new_User,
+                auth : true});
         }).catch(err=>{
             console.log(err);
+            res.status(400).send(err);
         });
     },
     signIn : (req, res) => {
