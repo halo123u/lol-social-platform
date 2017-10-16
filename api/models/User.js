@@ -44,6 +44,19 @@ UserSchema.pre('save',function(next){
     }
 });
 
+UserSchema.methods = {
+    generateAuthToken: function () {
+        const user = this,
+        access = 'auth',
+        token = jwt.sign({_id: user._id.toHexString(), access}, 'abd123'.toString());
+        
+        user.token.push({access,token});
+        return user.save().then(() => {
+            return token;
+        });
+    }
+}
+
 UserSchema.statics = {
     findByCredentials : function(username, password) {
         const User = this;
