@@ -3,26 +3,26 @@ Setup server
         a. league of legends ScreenName
         b.Account id (DONE)
         c. name 
-        d.password (PARTIALLY DONE)
+        d.password (DONE)
         e.email/username(DONE)
         f.potential stats
         g.friends
         h.profile page
 2.Set up all user Routes
     a. Post user/ (DONE)
-    b. Post user/login
+    b. Post user/login (DONE)
     c. Get user/
     d. Delete user/me
 3.Set up User Controller
-    a.newUser (PARTIALLY DONE)
+    a.newUser (DONE)
     b.getUserInfo
-    c.signIn
+    c.signIn (DONE)
     d.signOut
 4.Set up User Model
     a.pre save (DONE)
-    b.Generate Auth token
+    b.Generate Auth token (DONE)
     c.remove Auth token
-    d.findbyCredentials
+    d.findbyCredentials (DONE)
     e.findByToken
 5.Setup Client
     a.login/signup page
