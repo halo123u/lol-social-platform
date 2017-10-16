@@ -18,7 +18,12 @@ const userController ={
         let body = _.pick(req.body, ['username', 'password']);
         
         User.findByCredentials(body.username, body.password).then(user => {
-            res.send({user});
+            user.generateAuthToken().then(token => {
+                res.header('x-auth', token).send({user,
+                auth: true});
+            });
+        }).catch(e => {
+            res.status(400).send();
         })
 
     }   

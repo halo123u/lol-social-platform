@@ -49,8 +49,7 @@ UserSchema.methods = {
         const user = this,
         access = 'auth',
         token = jwt.sign({_id: user._id.toHexString(), access}, 'abd123'.toString());
-        
-        user.token.push({access,token});
+        user.tokens.push({access,token});
         return user.save().then(() => {
             return token;
         });
