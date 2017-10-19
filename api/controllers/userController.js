@@ -29,6 +29,13 @@ const userController ={
             res.status(400).send();
         })
 
+    },
+    signOut  : (req,res) => {
+        req.user.removeToken(req.token).then(() => {
+            res.status(200).send({message: 'You Succesfully logged out'});
+        }), () => {
+            res.status(400).send({message : 'something went wrong'});
+        }
     }   
 }
 
