@@ -12,18 +12,18 @@ Setup server
     a. Post user/ (DONE)
     b. Post user/login (DONE)
     c. Get user/
-    d. Delete user/me
+    d. Delete user/me (DONE)
 3.Set up User Controller
     a.newUser (DONE)
     b.getUserInfo
     c.signIn (DONE)
-    d.signOut
-4.Set up User Model
+    d.signOut (DONE)
+4.Set up User Model 
     a.pre save (DONE)
     b.Generate Auth token (DONE)
-    c.remove Auth token
+    c.remove Auth token (DONE)
     d.findbyCredentials (DONE)
-    e.findByToken
+    e.findByToken (DONE)
 5.Setup Client
     a.login/signup page
     b.profile page
