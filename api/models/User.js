@@ -83,6 +83,20 @@ UserSchema.statics = {
                 });
             });
         });
+    },
+    findByToken  : function (token) {
+        const User = this;
+        var decoded;
+        try{
+            decoded = jwt.verify(token, 'abd123');
+        } catch (e){
+            return Promise.reject();
+        }
+        return User.findOne({
+            '_id': decoded._id,
+            'tokens.token': token,
+            'tokens.access' : 'auth'
+        });
     }
 } 
 
